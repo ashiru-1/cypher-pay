@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYPHER PAY</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- App Header -->
+        <div class="app-header">
+            <h1>CYPHER PAY</h1>
+            <div class="currency-switch">
+                <label for="currency">Currency:</label>
+                <select id="currency">
+                    <option value="usd">USD</option>
+                    <option value="gbp">GBP</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Card Section -->
+        <div class="card-section">
+            <!-- Card 1: Account Balance -->
+            <div class="card">
+                <h2>Account Balance</h2>
+                <p id="account-balance">$12,345.67</p>
+                <form>
+                    <div>
+                        <label for="account">Select Account</label>
+                        <select id="account">
+                            <option value="checking">Checking Account</option>
+                            <option value="savings">Savings Account</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Card 2: Pay Bills -->
+            <div class="card">
+                <h2>Pay Bills</h2>
+                <form id="bill-form">
+                    <div>
+                        <label for="bill">Select Bill</label>
+                        <select id="bill">
+                            <option value="electricity">Electricity</option>
+                            <option value="water">Water</option>
+                            <option value="internet">Internet</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="amount">Amount</label>
+                        <input type="number" id="amount" placeholder="$0.00" required>
+                    </div>
+                    <button type="submit">Pay Now</button>
+                </form>
+            </div>
+
+            <!-- Card 3: Transfer Funds -->
+            <div class="card">
+                <h2>Transfer Funds</h2>
+                <form id="transfer-form">
+                    <div>
+                        <label for="transfer-to">Transfer To</label>
+                        <input type="text" id="transfer-to" placeholder="Recipient's Name" required>
+                    </div>
+                    <div>
+                        <label for="transfer-amount">Amount</label>
+                        <input type="number" id="transfer-amount" placeholder="$0.00" required>
+                    </div>
+                    <button type="submit">Transfer</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Transaction Section -->
+        <div class="transaction-section">
+            <h2>Recent Transactions</h2>
+            <ul id="transaction-list">
+                <li>Payment to ABC Corp - $120.00</li>
+                <li>Transfer from John Doe - $1,000.00</li>
+                <li>Payment to XYZ Services - $200.00</li>
+            </ul>
+        </div>
+
+        <!-- App Footer -->
+        <div class="app-footer">
+            <p>&copy; 2024 CYPHER PAY</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
